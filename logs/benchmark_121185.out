@@ -1,0 +1,126 @@
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- The CUDA compiler identification is NVIDIA 12.1.105
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /opt/csg/spack/opt/spack/linux-debian12-x86_64/gcc-12.2.0/cuda-12.1.1-emutkb5inshg3iqdwdotbke6lenfwhob/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- pybind11 v2.12.0 
+-- Found PythonInterp: /opt/csg/anaconda/bin/python3 (found suitable version "3.12.1", minimum required is "3.6") 
+-- Found PythonLibs: /opt/csg/anaconda/lib/libpython3.12.so
+-- Performing Test HAS_FLTO
+-- Performing Test HAS_FLTO - Success
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /csghome/gpu06/homework/build
+[ 25%] Building CUDA object CMakeFiles/bitonic_sort.dir/bitonic_sort.cu.o
+[ 50%] Building CXX object CMakeFiles/bitonic_sort.dir/bitonic_wrapper.cpp.o
+[ 75%] Linking CUDA device code CMakeFiles/bitonic_sort.dir/cmake_device_link.o
+[100%] Linking CXX shared module bitonic_sort.so
+[100%] Built target bitonic_sort
+
+--- Benchmarking size 512 ---
+CUDA Bitonic sort time: 0.634131 s
+NumPy sort time:        0.000172 s
+❌ Mismatch!
+
+--- Benchmarking size 1024 ---
+CUDA Bitonic sort time: 0.000651 s
+NumPy sort time:        0.000049 s
+✅ Results match
+
+--- Benchmarking size 2048 ---
+CUDA Bitonic sort time: 0.000703 s
+NumPy sort time:        0.000091 s
+✅ Results match
+
+--- Benchmarking size 4096 ---
+CUDA Bitonic sort time: 0.000838 s
+NumPy sort time:        0.000182 s
+✅ Results match
+
+--- Benchmarking size 8192 ---
+CUDA Bitonic sort time: 0.000888 s
+NumPy sort time:        0.000378 s
+✅ Results match
+
+--- Benchmarking size 16384 ---
+CUDA Bitonic sort time: 0.001013 s
+NumPy sort time:        0.000957 s
+✅ Results match
+
+--- Benchmarking size 32768 ---
+CUDA Bitonic sort time: 0.001194 s
+NumPy sort time:        0.001719 s
+✅ Results match
+
+--- Benchmarking size 65536 ---
+CUDA Bitonic sort time: 0.001513 s
+NumPy sort time:        0.003493 s
+✅ Results match
+
+--- Benchmarking size 131072 ---
+CUDA Bitonic sort time: 0.002000 s
+NumPy sort time:        0.007274 s
+✅ Results match
+
+--- Benchmarking size 262144 ---
+CUDA Bitonic sort time: 0.002885 s
+NumPy sort time:        0.014873 s
+✅ Results match
+
+--- Benchmarking size 524288 ---
+CUDA Bitonic sort time: 0.004434 s
+NumPy sort time:        0.029057 s
+✅ Results match
+
+--- Benchmarking size 1048576 ---
+CUDA Bitonic sort time: 0.008889 s
+NumPy sort time:        0.059160 s
+✅ Results match
+
+--- Benchmarking size 2097152 ---
+CUDA Bitonic sort time: 0.016725 s
+NumPy sort time:        0.117973 s
+✅ Results match
+
+--- Benchmarking size 4194304 ---
+CUDA Bitonic sort time: 0.032937 s
+NumPy sort time:        0.233601 s
+✅ Results match
+
+--- Benchmarking size 8388608 ---
+CUDA Bitonic sort time: 0.065917 s
+NumPy sort time:        0.472060 s
+✅ Results match
+
+--- Benchmarking size 16777216 ---
+CUDA Bitonic sort time: 0.138022 s
+NumPy sort time:        0.935714 s
+✅ Results match
+
+--- Benchmarking size 33554432 ---
+CUDA Bitonic sort time: 0.281005 s
+NumPy sort time:        1.873755 s
+✅ Results match
+
+--- Benchmarking size 67108864 ---
+CUDA Bitonic sort time: 0.588826 s
+NumPy sort time:        3.755609 s
+✅ Results match
+
+--- Benchmarking size 134217728 ---
+CUDA Bitonic sort time: 1.206488 s
+NumPy sort time:        7.585408 s
+✅ Results match
