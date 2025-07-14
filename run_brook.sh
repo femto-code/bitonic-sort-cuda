@@ -4,7 +4,7 @@
 #SBATCH --output=logs/benchmark_%j.out
 #SBATCH --error=logs/job_%j.err
 #SBATCH --time=00:10:00
-#SBATCH --partition=exercise-hpdc
+#SBATCH --partition=exercise-gpu
 #SBATCH --gres=gpu:1
 
 spack env activate cuda

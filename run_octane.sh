@@ -4,7 +4,7 @@
 #SBATCH --output=logs/benchmark_%j.out
 #SBATCH --error=logs/job_%j.err
 #SBATCH --time=00:10:00
-#SBATCH --partition=exercise-gpu
+#SBATCH --partition=exercise-hpdc
 #SBATCH --gres=gpu:1
 
 spack env activate cuda
@@ -16,4 +16,4 @@ cmake ..
 make
 cp bitonic_sort.so ../
 cd ..
-srun python3 wrapper_with_plotting.py --cluster moore
+srun python3 wrapper_with_plotting.py --cluster octane
