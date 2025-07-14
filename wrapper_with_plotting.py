@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     cluster_name = args.cluster
 
-    sizes = [2**i for i in range(9, 28)]  # From 512 to X
+    sizes = [2**i for i in range(10, 28)]
     cuda_times = []
     numpy_times = []
     valid = []

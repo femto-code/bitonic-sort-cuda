@@ -42,19 +42,25 @@ make
 cp bitonic_sort.so ../
 ```
 
+## Building and running kernel directly
+```bash
+nvcc -O2 -o bitonic main.cpp bitonic_sort.cu
+./bitonic
+```
+
 ## Running on Clusters
 
-### Moore Cluster
+### Brook Cluster
 
 **GPU Architecture Details**:
 - NVIDIA GeForce RTX 2080 Ti
 - SM count: 68
 - Shared memory per block: 49152
 
-To run the benchmark on the Moore cluster:
+To run the benchmark on the Brook cluster:
 
 ```bash
-sbatch run_moore.sh
+sbatch run_brook.sh
 ```
 
 This script:
@@ -64,17 +70,17 @@ This script:
 - Builds the project and runs the benchmark
 - Saves results with "moore" cluster identifier
 
-### Brook Cluster
+### Octane Cluster
 
 **GPU Architecture Details**:
 - NVIDIA TITAN X (Pascal)
 - SM count: 28
 - Shared memory per block: 49152
 
-To run the benchmark on the Brook cluster:
+To run the benchmark on the Octane cluster:
 
 ```bash
-sbatch run_brook.sh
+sbatch run_octane.sh
 ```
 
 This script:
