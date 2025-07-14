@@ -30,97 +30,92 @@
 [100%] Linking CXX shared module bitonic_sort.so
 [100%] Built target bitonic_sort
 
---- Benchmarking size 512 ---
-CUDA Bitonic sort time: 0.206196 s
-NumPy sort time:        0.000069 s
-❌ Mismatch!
-
 --- Benchmarking size 1024 ---
-CUDA Bitonic sort time: 0.000792 s
-NumPy sort time:        0.000019 s
+CUDA Bitonic sort time: 0.727104 s
+NumPy sort time:        0.000228 s
 ✅ Results match
 
 --- Benchmarking size 2048 ---
-CUDA Bitonic sort time: 0.000839 s
-NumPy sort time:        0.000015 s
+CUDA Bitonic sort time: 0.000843 s
+NumPy sort time:        0.000110 s
 ✅ Results match
 
 --- Benchmarking size 4096 ---
-CUDA Bitonic sort time: 0.000926 s
-NumPy sort time:        0.000026 s
+CUDA Bitonic sort time: 0.002920 s
+NumPy sort time:        0.000223 s
 ✅ Results match
 
 --- Benchmarking size 8192 ---
-CUDA Bitonic sort time: 0.001025 s
-NumPy sort time:        0.000046 s
+CUDA Bitonic sort time: 0.001020 s
+NumPy sort time:        0.000443 s
 ✅ Results match
 
 --- Benchmarking size 16384 ---
-CUDA Bitonic sort time: 0.001136 s
-NumPy sort time:        0.000089 s
+CUDA Bitonic sort time: 0.001165 s
+NumPy sort time:        0.000975 s
 ✅ Results match
 
 --- Benchmarking size 32768 ---
-CUDA Bitonic sort time: 0.001273 s
-NumPy sort time:        0.000179 s
+CUDA Bitonic sort time: 0.001359 s
+NumPy sort time:        0.001991 s
 ✅ Results match
 
 --- Benchmarking size 65536 ---
-CUDA Bitonic sort time: 0.001441 s
-NumPy sort time:        0.000364 s
+CUDA Bitonic sort time: 0.001720 s
+NumPy sort time:        0.004231 s
 ✅ Results match
 
 --- Benchmarking size 131072 ---
-CUDA Bitonic sort time: 0.001764 s
-NumPy sort time:        0.000759 s
+CUDA Bitonic sort time: 0.002231 s
+NumPy sort time:        0.008277 s
 ✅ Results match
 
 --- Benchmarking size 262144 ---
-CUDA Bitonic sort time: 0.002324 s
-NumPy sort time:        0.001785 s
+CUDA Bitonic sort time: 0.003185 s
+NumPy sort time:        0.017248 s
 ✅ Results match
 
 --- Benchmarking size 524288 ---
-CUDA Bitonic sort time: 0.003329 s
-NumPy sort time:        0.003855 s
+CUDA Bitonic sort time: 0.004954 s
+NumPy sort time:        0.034942 s
 ✅ Results match
 
 --- Benchmarking size 1048576 ---
-CUDA Bitonic sort time: 0.004997 s
-NumPy sort time:        0.007136 s
+CUDA Bitonic sort time: 0.010574 s
+NumPy sort time:        0.069123 s
 ✅ Results match
 
 --- Benchmarking size 2097152 ---
-CUDA Bitonic sort time: 0.010506 s
-NumPy sort time:        0.013001 s
+CUDA Bitonic sort time: 0.017758 s
+NumPy sort time:        0.141337 s
 ✅ Results match
 
 --- Benchmarking size 4194304 ---
-CUDA Bitonic sort time: 0.019724 s
-NumPy sort time:        0.019807 s
+CUDA Bitonic sort time: 0.034655 s
+NumPy sort time:        0.274546 s
 ✅ Results match
 
 --- Benchmarking size 8388608 ---
-CUDA Bitonic sort time: 0.039798 s
-NumPy sort time:        0.037979 s
+CUDA Bitonic sort time: 0.066082 s
+NumPy sort time:        0.469326 s
 ✅ Results match
 
 --- Benchmarking size 16777216 ---
-CUDA Bitonic sort time: 0.081274 s
-NumPy sort time:        0.073323 s
+CUDA Bitonic sort time: 0.137296 s
+NumPy sort time:        0.942876 s
 ✅ Results match
 
 --- Benchmarking size 33554432 ---
-CUDA Bitonic sort time: 0.169650 s
-NumPy sort time:        0.147504 s
+CUDA Bitonic sort time: 0.283807 s
+NumPy sort time:        1.880362 s
 ✅ Results match
 
 --- Benchmarking size 67108864 ---
-CUDA Bitonic sort time: 0.353431 s
-NumPy sort time:        0.296595 s
+CUDA Bitonic sort time: 0.589713 s
+NumPy sort time:        3.730642 s
 ✅ Results match
 
 --- Benchmarking size 134217728 ---
-CUDA Bitonic sort time: 0.742692 s
-NumPy sort time:        0.592582 s
+CUDA Bitonic sort time: 1.205337 s
+NumPy sort time:        7.600772 s
 ✅ Results match
