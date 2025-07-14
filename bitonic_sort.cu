@@ -61,38 +61,24 @@ __global__ void bitonicMergeKernel(int* arr, int j, int k, int n) {
 // Utility function to run the full sort
 void bitonicSort(int* h_arr, int n) {
 
-    // cudaDeviceProp prop;
-    // cudaGetDeviceProperties(&prop, 0);
-    // printf("GPU: %s, SM count: %d, Shared memory per block: %zu\n", prop.name, prop.multiProcessorCount, prop.sharedMemPerBlock);
-
-    // int minGridSize, blockSize;
-    // cudaOccupancyMaxPotentialBlockSize(&minGridSize, &blockSize, bitonicSortShared, 0, 0);
-    // printf("Suggested block size: %d\n", blockSize);
-
     int* d_arr;
     size_t bytes = n * sizeof(int);
     
     CUDA_CHECK(cudaMalloc(&d_arr, bytes));
     CUDA_CHECK(cudaMemcpy(d_arr, h_arr, bytes, cudaMemcpyHostToDevice));
     
-    // cudaMalloc(&d_arr, bytes);
-    // cudaMemcpy(d_arr, h_arr, bytes, cudaMemcpyHostToDevice);
     // Step 1: Shared memory block-wise sort
     int numBlocks = (n + BLOCK_SIZE - 1) / BLOCK_SIZE;
-    // printf("numBlocks=%d BLOCK_SIZE=%d\n", numBlocks, BLOCK_SIZE);
+    
     bitonicSortShared<<<numBlocks, BLOCK_SIZE>>>(d_arr);
     CUDA_CHECK(cudaGetLastError());
     CUDA_CHECK(cudaDeviceSynchronize());
-    // bitonicSortShared<<<numBlocks, BLOCK_SIZE>>>(d_arr);
-    // cudaDeviceSynchronize();
 
     // Step 2: Global merge steps
-    int threads = BLOCK_SIZE;
-    int blocks = (n + threads - 1) / threads;
 
     for (int k = 2; k <= n; k <<= 1) { // k = 2, 4, 8, ...
         for (int j = k >> 1; j > 0; j >>= 1) { // j = k/2, k/4, ..., 1
-            bitonicMergeKernel<<<blocks, threads>>>(d_arr, j, k, n);
+            bitonicMergeKernel<<<numBlocks, BLOCK_SIZE>>>(d_arr, j, k, n);
             cudaDeviceSynchronize();
         }
     }

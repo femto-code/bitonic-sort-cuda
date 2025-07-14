@@ -1,7 +1,7 @@
 #include <pybind11/pybind11.h>
 #include <pybind11/numpy.h>
 #include "bitonic_sort.h"
-#define BLOCK_SIZE 128
+#define BLOCK_SIZE 1024
 
 
 namespace py = pybind11;
